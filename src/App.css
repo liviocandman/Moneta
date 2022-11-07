@@ -180,7 +180,8 @@ body{
 .side-menu .main-menu{
   position: relative;
   height: 500px;
-
+  overflow-y: scroll;
+  
 }
 /* not required any more */
 .side-menu.inactive .main-menu{
@@ -213,14 +214,17 @@ body{
 }
 
 .side-menu .main-menu .sub-menu{
-  color: #333;
-  margin-left: 20px;
-  border-left: 1px solid #666;
-  box-sizing: border-box;
-  padding-left: 30px;
   max-height: 0;
+  background: #414757;
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  
   overflow: hidden;
   transition: max-height .2s ease-in;
+  text-decoration: none;
+  flex-direction: column;
 }
 
 .side-menu .main-menu .sub-menu.active{
@@ -228,14 +232,14 @@ body{
 }
 
 .side-menu .main-menu .sub-menu a{
-  display: block;
-  margin: 5px 0;
+  display: flex;
+
   font-size: 15px;
-  font-weight: 600;
+  width: 200px;
   text-decoration: none;
-  color: #333;
+  color: #f5f5f5;
   box-sizing: border-box;
-  padding: 5px;
+ 
 }
 
 

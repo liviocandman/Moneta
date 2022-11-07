@@ -13,25 +13,29 @@ export const menuData = [
     title: "Dashboard",
     exact: true,
     path: "/",
-    iconClassName: <FaIcons.FaHome />,
+    icon: <FaIcons.FaHome />,
   },
   {
     title: "Finanças",
     exact: true,
     path: "/financas",
-    iconClassName: <FaIcons.FaWallet />,
+    icon: <FaIcons.FaWallet />,
   },
   {
     title: "Clientes",
     exact: true,
     path: "/clientes",
-    iconClassName: <FaIcons.FaUsers />,
+    icon: <FaIcons.FaUsers />,
     subMenu: [
       {
-        title: "Lista", path: "/clientes/lista"
+        title: 'Lista',
+        path: '/clientes/list',
+        icon: <FaIcons.FaUserEdit />,
       },
       {
-        title: "Adicionar", path: "/clientes/adicionar"
+          title: 'Adicionar',
+          path: '/clientes/add',
+          icon: <FaIcons.FaUserPlus />,
       }
     ]
   },
@@ -39,37 +43,37 @@ export const menuData = [
     title: "Fornecedores",
     exact: true,
     path: "/fornecedores",
-    iconClassName: <FaIcons.FaBox />,
+    icon: <FaIcons.FaBox />,
   },
   {
     title: 'Tabelas',
     exact: true,
     path: '/tabelas',
-    iconClassName: <FaIcons.FaTable />,
+    icon: <FaIcons.FaTable />,
 },
 {
     title: 'Contas Bancárias',
     exact: true,
     path: '/contasbancarias',
-    iconClassName: <FaIcons.FaFileInvoiceDollar />,
+    icon: <FaIcons.FaFileInvoiceDollar />,
 },
 {
     title: 'Cheques',
     exact: true,
     path: '/cheques',
-    iconClassName: <FaIcons.FaDollarSign />,
+    icon: <FaIcons.FaDollarSign />,
 },
 {
     title: 'Relatórios',
     exact: true,
     path: '/relatorios',
-    iconClassName: <FaIcons.FaPollH />,
+    icon: <FaIcons.FaPollH />,
 },
 {
   title: 'Simulações',
   exact: true,
   path: '/simulacoes',
-  iconClassName: <FaIcons.FaChartLine />,
+  icon: <FaIcons.FaChartLine />,
   subMenu: [
       {
           title: 'Empréstimos',
@@ -92,7 +96,7 @@ export const menuData = [
   title: 'Utilitários',
   exact: true,
   path: '/utilitarios',
-  iconClassName: <FaIcons.FaStream />,
+  icon: <FaIcons.FaStream />,
 }
 
 ];
@@ -140,7 +144,7 @@ const SideMenu = (props) => {
                   title={item.title}
                   path={item.path}
                   subMenu={item.subMenu || []}
-                  iconClassName={item.iconClassName}
+                  icon={item.icon}
                   
                 />
               ) )}
