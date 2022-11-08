@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa'
 
 import { NavLink } from "react-router-dom";
 
-import avatar from "../../assets/avatar.png"
+
 import logo from "../../assets/logo-monetaweb.png";
 
 import MenuItem from "./MenuItem";
@@ -29,12 +29,12 @@ export const menuData = [
     subMenu: [
       {
         title: 'Lista',
-        path: '/clientes/list',
+        path: '/clientes/lista',
         icon: <FaIcons.FaUserEdit />,
       },
       {
           title: 'Adicionar',
-          path: '/clientes/add',
+          path: '/clientes/adicionar',
           icon: <FaIcons.FaUserPlus />,
       }
     ]
@@ -50,12 +50,6 @@ export const menuData = [
     exact: true,
     path: '/tabelas',
     icon: <FaIcons.FaTable />,
-},
-{
-    title: 'Contas Bancárias',
-    exact: true,
-    path: '/contasbancarias',
-    icon: <FaIcons.FaFileInvoiceDollar />,
 },
 {
     title: 'Cheques',
@@ -111,13 +105,35 @@ const SideMenu = (props) => {
   return (
   
     <>
-      
-      <div className={`side-menu ${inactive ? "inactive" : ""}`}>
-
+      <header className="nav" >
         <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
-          <FaIcons.FaBars />
-        </NavLink>
+            <FaIcons.FaBars />
+          </NavLink>
+                
+              
+                <NavLink className="nav_logo" to="/">
+                  <img src={logo} />
+                </NavLink>
+               
+                <div className="nav_actions">
+                    <NavLink className="nav_actions_icons">
+                        <FaIcons.FaBell />
+                    </NavLink>
+                    <NavLink className="nav_actions_icons">
+                        <FaIcons.FaQuestionCircle />
+                    </NavLink>
+                    <NavLink className="nav_actions_icons">
+                        <FaIcons.FaUserAlt />
+                    </NavLink >
+                    <NavLink className="nav_actions_icons">
+                        <FaIcons.FaCog />
+                    </NavLink>
+                </div>
+            </header>
 
+             
+      <div className={`side-menu ${inactive ? "inactive" : ""}`}>
+      <div className="main-menu">
         <NavLink className="top-section">
           <div className="avatar">
             <FaIcons.FaUserCircle className="user-img" />
@@ -126,32 +142,31 @@ const SideMenu = (props) => {
 
         </NavLink>
 
-     {/*   
+     
           <div className="search-controller">
             <button className="search-btn">
               <i class="bi bi-search"></i>
             </button>
             <input type="text" placeholder="search" />
-          </div> */}
+          </div> 
 
 
-        <div className="divider">
-          <div className="main-menu"> 
-            
-              {menuData.map((item, idx) => (
-                <MenuItem 
-                  key={idx}
-                  title={item.title}
-                  path={item.path}
-                  subMenu={item.subMenu || []}
-                  icon={item.icon}
-                  
-                />
-              ) )}
-            
-          </div>
+        <div className="divider">       
         </div>
-       
+        
+            
+            {menuData.map((item, idx) => (
+              <MenuItem 
+                key={idx}
+                title={item.title}
+                path={item.path}
+                subMenu={item.subMenu || null}
+                icon={item.icon}
+                
+              />
+            ) )}
+          
+        </div>
       </div>
       
       

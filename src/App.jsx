@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import SideMenu from './components/sidebar/SideMenu'
 import './App.css'
 
-import Navbar from './components/layout/Navbar'
 
 import Dashboard from './components/pages/Dashboard'
 import ClientesAdicionar from './components/pages/ClientesAdicionar'
@@ -22,7 +21,7 @@ function App() {
         }}
       />
       <div className={`container ${inactive ? "inactive" : ""}`}>
-        <Navbar />
+       
         <Routes>
           <Route path="/" exact element={<Dashboard />} />
           <Route path="clientes/lista" element={<ClientesLista />} /> 
