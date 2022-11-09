@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import * as FaIcons from 'react-icons/fa'
 
-import { NavLink } from "react-router-dom";
-
-
 import logo from "../../assets/logo-monetaweb.png";
+import { NavLink } from "react-router-dom";
 
 import MenuItem from "./MenuItem";
 
@@ -103,36 +101,32 @@ const SideMenu = (props) => {
   })
 
   return (
-  
     <>
-      <header className="nav" >
-        <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+     <header className="nav" >
+     <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
             <FaIcons.FaBars />
           </NavLink>
-                
-              
-                <NavLink className="nav_logo" to="/">
-                  <img src={logo} />
-                </NavLink>
-               
-                <div className="nav_actions">
-                    <NavLink className="nav_actions_icons">
-                        <FaIcons.FaBell />
-                    </NavLink>
-                    <NavLink className="nav_actions_icons">
-                        <FaIcons.FaQuestionCircle />
-                    </NavLink>
-                    <NavLink className="nav_actions_icons">
-                        <FaIcons.FaUserAlt />
-                    </NavLink >
-                    <NavLink className="nav_actions_icons">
-                        <FaIcons.FaCog />
-                    </NavLink>
-                </div>
-            </header>
-
+              <NavLink className="nav_logo" to="/">
+                <img src={logo} />
+              </NavLink>
              
+              <div className="nav_actions">
+                  <NavLink className="nav_actions_icons">
+                      <FaIcons.FaBell />
+                  </NavLink>
+                  <NavLink className="nav_actions_icons">
+                      <FaIcons.FaQuestionCircle />
+                  </NavLink>
+                  <NavLink className="nav_actions_icons">
+                      <FaIcons.FaUserAlt />
+                  </NavLink >
+                  <NavLink className="nav_actions_icons">
+                      <FaIcons.FaCog />
+                  </NavLink>
+              </div>
+          </header>
       <div className={`side-menu ${inactive ? "inactive" : ""}`}>
+      
       <div className="main-menu">
         <NavLink className="top-section">
           <div className="avatar">
@@ -141,14 +135,6 @@ const SideMenu = (props) => {
           </div>
 
         </NavLink>
-
-     
-          <div className="search-controller">
-            <button className="search-btn">
-              <i class="bi bi-search"></i>
-            </button>
-            <input type="text" placeholder="search" />
-          </div> 
 
 
         <div className="divider">       
