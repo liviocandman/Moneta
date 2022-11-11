@@ -20,7 +20,7 @@ const Navbar = () => {
           </div>
           <div className="profile">
             <div className="profile-photo">
-              <img src={"../../assets/musk.png"} />
+              <img alt="" src={userImg} />
             </div>
             <h5>Luke Doe</h5>
             <MdIcons.MdExpandMore />

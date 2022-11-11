@@ -1,26 +1,26 @@
 .navbar{
     width: 100%;
     background: var(--color-white);
+    
 }
 .navbar .navbar-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    
     
 }
 .navbar .navbar-container .search-bar{
     background: var(--color-light);
     padding: 0.5rem 1rem;
-    width:15vw;
+    width:13vw;
     border-radius: var(--border-radius-1);
     display: flex;
     align-items: center;
     gap: 1rem;
     color: var(--color-info-dark);
-    position: relative;
-    left: 25vw;
-
+    margin-left: 2rem ;
+   
 }
 .navbar .search-bar input[type="search"] {
     background: transparent;
@@ -37,17 +37,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+    margin-right: 2rem;
 }
 .navbar .profile-area .theme-btn {
     display: flex;
     background: var(--color-light);
-    widht: 5rem;
+   
     height: 2rem;
     border-radius: var(--border-radius-1);
     cursor: pointer;
 }
 .navbar .profile-area .theme-btn .dlMode-icons{
-    widht: 50%;
+    
     height: 100%;
     display: flex;
     align-items: center;
@@ -65,9 +66,12 @@
     align-items: center;
 
 }
-.navbar .profile-area .profile .profile-photo {
-    width: 40px;
-    height: 40px;
+.navbar .profile-area .profile .profile-photo  {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+}
+.navbar .profile-area .profile .profile-photo img {
+    width: 100%;
     border-radius: 50%;
-
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as FaIcons from 'react-icons/fa'
 
-import logo from "../../assets/logo-monetaweb.png";
+import logo from "../../assets/logo-dark.png";
 import { NavLink } from "react-router-dom";
 
 import MenuItem from "./MenuItem";
@@ -106,10 +106,12 @@ const SideMenu = (props) => {
      <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
             <FaIcons.FaBars />
           </NavLink>
-              <NavLink className="nav_logo" to="/">
-                <img src={logo} />
-              </NavLink>
+              <div className="nav_logo"> 
+                <NavLink className="" to="/">
+                  <img src={logo} />
+                </NavLink>
              
+              </div>
               <div className="nav_actions">
                   <NavLink className="nav_actions_icons">
                       <FaIcons.FaBell />

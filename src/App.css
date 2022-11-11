@@ -80,6 +80,9 @@ body{
 }
 .nav .nav_logo{
   margin-left: 1rem;
+  display: flex;
+
+  
 }
 
 .nav .nav_actions{
