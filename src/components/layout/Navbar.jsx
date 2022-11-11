@@ -1,33 +1,34 @@
 import * as MdIcons from 'react-icons/md'
-import * as FaIcons from 'react-icons/fa'
+import userImg from "../../assets/musk.png"
 import { NavLink } from "react-router-dom";
+
+import "./Navbar.css"
 
 const Navbar = () => {
   return (
     <>
       <div className='navbar'>
+      <div className='navbar-container'>
         <div className="search-bar">
           <MdIcons.MdSearch />
-          <input type="search" />
+          <input type="search" placeholder='Search' />
         </div>
         <div className="profile-area">
           <div className="theme-btn">
-            <MdIcons.MdLightMode />
-            <MdIcons.MdDarkMode />
+            <MdIcons.MdLightMode className='dlMode-icons active'/>
+            <MdIcons.MdDarkMode className='dlMode-icons'/>
           </div>
           <div className="profile">
             <div className="profile-photo">
-              <FaIcons.FaUserCircle />
+              <img src={"../../assets/musk.png"} />
             </div>
             <h5>Luke Doe</h5>
             <MdIcons.MdExpandMore />
           </div>
-          <button id="menu-btn">
-            <MdIcons.MdMenu />
-          </button>
-
+     
         </div>
       </div>
+    </div>
     </>
   )
 }
