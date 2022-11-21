@@ -2,13 +2,13 @@
 import './Dashboard.css'
 import * as MdIcons from "react-icons/md";
 
-import Navbar from '../layout/Navbar';
+import Top from '../layout/Top';
 
 const Dashboard = () => {
   return (
-    <>
+    <div className="content">
       <div className="main">
-      <Navbar />
+     
         <h1>Dashboard</h1>
 
         <div className="date">
@@ -127,13 +127,107 @@ const Dashboard = () => {
       </div>
       {/* ------------ End of MAIN ------------ */}
       <div className="right">
-        <div className="top">
-          <button className="menu-btn">
+
+        <Top />
+        <div className="recent-updates">
+          <h2>Recent Updates</h2>
+          <div className="updates">
+            <div className="update">
+              <div className="profile-photo">
+                <img src="/src/assets/luke.png" alt="" />
+                </div>
+                <div className="message">
+                  <p><b>Luke Kage</b> reiceved his order</p>
+                  <small className="text-muted">4 Minutes ago</small>
+              </div>
+            </div>
+            <div className="update">
+              <div className="profile-photo">
+                <img src="/src/assets/luke.png" alt="" />
+                </div>
+                <div className="message">
+                  <p><b>Luke Kage</b> reiceved his order</p>
+                  <small className="text-muted">4 Minutes ago</small>
+              </div>
+            </div>
+            <div className="update">
+              <div className="profile-photo">
+                <img src="/src/assets/luke.png" alt="" />
+                </div>
+                <div className="message">
+                  <p><b>Luke Kage</b> reiceved his order</p>
+                  <small className="text-muted">4 Minutes ago</small>
+              </div>
+            </div>
+            <div className="update">
+              <div className="profile-photo">
+                <img src="/src/assets/luke.png" alt="" />
+                </div>
+                <div className="message">
+                  <p><b>Luke Kage</b> reiceved his order</p>
+                  <small className="text-muted">4 Minutes ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* -------- END OF RECENT UPDATES -------- */}
+        <div className="sales-analytics">
+          <h2>Sales Analytics</h2>
+          <div className="item online">
+            <div className="icon">
+              <MdIcons.MdShoppingCart />
+            </div>
             
-          </button>
+            <div className="sales-right">
+              <div className="info">
+                <h3>ONLINE ORDERS</h3>
+                <small className="text-muted">Last 24 hours</small>
+              </div>
+              <h5 className=
+              "success">+20%</h5>
+              <h3>2873</h3>
+            </div>
+          </div>
+          <div className="item offline">
+            <div className="icon">
+              <MdIcons.MdShoppingBag />
+            </div>
+            
+            <div className="sales-right">
+              <div className="info">
+                <h3>OFFLINE ORDERS</h3>
+                <small className="text-muted">Last 24 hours</small>
+              </div>
+              <h5 className=
+              "danger">-9%</h5>
+              <h3>981</h3>
+            </div>
+          </div>
+          <div className="item customers">
+           <div className="icon">
+           <MdIcons.MdPerson />
+           </div>
+            
+            <div className="sales-right">
+              <div className="info">
+                <h3>NEW CUSTOMERS</h3>
+                <small className="text-muted">Last 24 hours</small>
+              </div>
+              <h5 className=
+              "success">+49%</h5>
+              <h3>237</h3>
+            </div>
+          </div>
+          <div className="item add-product">
+            <div>
+              <MdIcons.MdAdd />
+              <h3>Add Product</h3>
+            </div>
+          </div>
+
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

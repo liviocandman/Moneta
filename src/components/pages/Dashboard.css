@@ -1,6 +1,13 @@
+.content{
+    display: grid;
+    widht: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns:  auto 23rem;
+}
+
 .main {
     margin-top: 4.4rem;
-   
 }
 .main .date{
     display: inline-block;
@@ -133,4 +140,111 @@
     margin: 1rem auto;
     text-decoration: none;
     color: var(--color-primary);
+}
+
+/* ============ RIGHT ========= */
+
+.right{
+    margin-top: 4.4rem;
+}
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    
+}
+.right .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+.right .theme-toggler .dlMode-icons {
+    font-size: 1.2rem;
+    widht: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right .theme-toggler .dlMode-icons .active{
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+.right .top .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* ========= RECENT UPDATES ========= */
+.right .recent-updates {
+    margin-top: 1rem;
+}
+.right .recent-updates h2 {
+    margin-bottom: 0.8rem;
+}
+.right .recent-updates .updates{
+    background: var(--color-white);
+    padding: var(--car-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+.right .recent-updates .updates:hover {
+    box-shadow: none;
+}
+.right .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ========= SALES ANALYTICS ========= */
+.right .sales-analytics {
+    margin-top: 2rem;
+}
+.right .sales-analytics h2{
+    margin-bottom: 0.8rem;
+}
+.right .sales-analytics .item{
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+.right .sales-analytics .item:hover{
+    box-shadow: none;
+}
+.right .sales-analytics .item .sales-right{
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    margin: 0;
+    font-size: 0.9rem;
+}
+.right .sales-analytics .item .icon {
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    font-size: 1.4rem;
+    background: var(--color-success);
+    padding: 0.6rem;
+}
+.right .sales-analytics .item.offline .icon {
+    background: var(--color-danger);
+}
+.right .sales-analytics .item.customers .icon {
+    background: var(--color-warning);
 }
