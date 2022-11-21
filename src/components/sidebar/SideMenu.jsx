@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import * as FaIcons from 'react-icons/fa'
 
-import logo from "../../assets/logo-monetaweb.png";
+import * as FaIcons from 'react-icons/fa'
+import * as MdIcons from 'react-icons/md'
+
+import logo from "../../assets/logo-dark.png";
 import { NavLink } from "react-router-dom";
 
 import MenuItem from "./MenuItem";
@@ -102,37 +104,14 @@ const SideMenu = (props) => {
 
   return (
     <>
-     <header className="nav" >
-     <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
-            <FaIcons.FaBars />
-          </NavLink>
-              <NavLink className="nav_logo" to="/">
-                <img src={logo} />
-              </NavLink>
-             
-              <div className="nav_actions">
-                  <NavLink className="nav_actions_icons">
-                      <FaIcons.FaBell />
-                  </NavLink>
-                  <NavLink className="nav_actions_icons">
-                      <FaIcons.FaQuestionCircle />
-                  </NavLink>
-                  <NavLink className="nav_actions_icons">
-                      <FaIcons.FaUserAlt />
-                  </NavLink >
-                  <NavLink className="nav_actions_icons">
-                      <FaIcons.FaCog />
-                  </NavLink>
-              </div>
-          </header>
+      
       <div className={`side-menu ${inactive ? "inactive" : ""}`}>
       
       <div className="main-menu">
         <NavLink className="top-section">
-          <div className="avatar">
-            <FaIcons.FaUserCircle className="user-img" />
-            <span>Samuel</span>
-          </div>
+         
+            <img src={logo} alt="" />
+     
 
         </NavLink>
 
@@ -155,6 +134,25 @@ const SideMenu = (props) => {
         </div>
       </div>
       
+      <div className="top">
+        
+        <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+       <MdIcons.MdMenu />
+     </NavLink>
+        
+        <div className="theme-toggler">
+          <MdIcons.MdLightMode className='dlMode-icons active'/>
+          <MdIcons.MdDarkMode className='dlMode-icons'/>
+        </div>
+        <div className="profile">
+          <div className="info">
+            <p>Hi, <b>John</b></p> 
+          </div>
+            <div className="profile-photo">
+              <img src={"/src/assets/musk.png"} />
+            </div>
+          </div>
+      </div>
       
     </>
    

@@ -1,13 +1,13 @@
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import SideMenu from './components/sidebar/SideMenu'
 import './App.css'
-
-
 import Dashboard from './components/pages/Dashboard'
 import ClientesAdicionar from './components/pages/ClientesAdicionar'
 import ClientesLista from './components/pages/ClientesLista'
-import { useState } from 'react'
+
+
 
 function App() {
 
@@ -20,8 +20,9 @@ function App() {
           setInactive(inactive);
         }}
       />
+      
       <div className={`container ${inactive ? "inactive" : ""}`}>
-       
+    
         <Routes>
           <Route path="/" exact element={<Dashboard />} />
           <Route path="clientes/lista" element={<ClientesLista />} /> 

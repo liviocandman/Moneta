@@ -2,7 +2,7 @@
 import './Dashboard.css'
 import * as MdIcons from "react-icons/md";
 
-import Top from '../layout/Top';
+
 
 const Dashboard = () => {
   return (
@@ -128,7 +128,7 @@ const Dashboard = () => {
       {/* ------------ End of MAIN ------------ */}
       <div className="right">
 
-        <Top />
+       
         <div className="recent-updates">
           <h2>Recent Updates</h2>
           <div className="updates">
@@ -178,7 +178,7 @@ const Dashboard = () => {
               <MdIcons.MdShoppingCart />
             </div>
             
-            <div className="sales-right">
+            <div className="right">
               <div className="info">
                 <h3>ONLINE ORDERS</h3>
                 <small className="text-muted">Last 24 hours</small>
@@ -193,7 +193,7 @@ const Dashboard = () => {
               <MdIcons.MdShoppingBag />
             </div>
             
-            <div className="sales-right">
+            <div className="right">
               <div className="info">
                 <h3>OFFLINE ORDERS</h3>
                 <small className="text-muted">Last 24 hours</small>
@@ -208,14 +208,14 @@ const Dashboard = () => {
            <MdIcons.MdPerson />
            </div>
             
-            <div className="sales-right">
+            <div className="right">
               <div className="info">
                 <h3>NEW CUSTOMERS</h3>
                 <small className="text-muted">Last 24 hours</small>
               </div>
               <h5 className=
               "success">+49%</h5>
-              <h3>237</h3>
+              <h3>1157</h3>
             </div>
           </div>
           <div className="item add-product">
