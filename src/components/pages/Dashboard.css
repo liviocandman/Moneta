@@ -8,7 +8,9 @@
     margin-left: 0.6rem;
 }
 
-
+.main{
+    margin-top: 1.5rem;
+}
 .main .date{
     display: inline-block;
     background: var(--color-light);
@@ -44,9 +46,11 @@
     padding: 0.5rem;
     border-radius: 50%;
     color: var(--color-white);
-    font-size: 2rem;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+    margin-bottom:1rem;
+   
+
 }
 .main .insights >div.expenses .icon-dashboard{
     background: var(--color-danger);
@@ -64,6 +68,7 @@
     width: 92px;
     height: 92px; 
     border-radius: 50%;
+    
 }
 .main .insights svg {
     width: 7rem;
@@ -145,7 +150,7 @@
 
 /* ========= RECENT UPDATES ========= */
 .right .recent-updates {
-    margin-top: 1rem;
+    margin-top: 4rem;
 }
 .right .recent-updates h2 {
     margin-bottom: 2rem;
@@ -193,7 +198,7 @@
     gap: 1rem;
     align-items: start;
     margin: 0;
-    font-size: 0.9rem;
+
 }
 .right .sales-analytics .item .icon {
     border-radius: 50%;
@@ -234,11 +239,11 @@
     }
     .main .recent-orders{
         widht: 94%;
-        position: absolute;
+     
     }
-    .main .recent-orders table {
-        width: 88vw;
-    }
+    /* .main .recent-orders table {
+     
+    } */
     .main table thead tr th:last-child,
     .main table thead tr th:first-child{
         display: none;
@@ -261,10 +266,9 @@
   }
 
   .main .recent-orders{
-      position: relative;
+  
       margin: 3rem 0 0 0;
       widht: 100%;
-      
   }
   .main .recent-orders table{
       widht: 100%;

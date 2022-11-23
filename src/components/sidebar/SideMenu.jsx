@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import * as FaIcons from 'react-icons/fa'
 import * as MdIcons from 'react-icons/md'
 
-import logo from "../../assets/logo-dark.png";
+import logo from "../../assets/logoMonetaWeb330x100.png";
 import { NavLink } from "react-router-dom";
 
 import MenuItem from "./MenuItem";
@@ -104,22 +104,40 @@ const SideMenu = (props) => {
 
   return (
     <>
-      
-      <div className={`side-menu ${inactive ? "inactive" : ""}`}>
-      
-      <div className="main-menu">
-        <NavLink className="top-section">
-         
-            <img src={logo} alt="" />
-     
-
-        </NavLink>
-
-
-        <div className="divider">       
-        </div>
+      <div className="top">
         
-            
+        <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+          <MdIcons.MdMenu />
+        </NavLink>
+        
+        <div onClick={() => {document.body.classList.toggle('dark-theme')}} className="theme-toggler">
+          <MdIcons.MdLightMode className='dlMode-icons active'/>
+          <MdIcons.MdDarkMode className='dlMode-icons'/>
+        </div>
+        <div className="profile">
+          <div className="info">
+            <p>Hi, <b>John</b></p> 
+          </div>
+            <div className="profile-photo">
+              <img src={"/src/assets/musk.png"} />
+            </div>
+          </div>
+      </div>
+      <div className={`side-menu ${inactive ? "inactive" : ""}`}>
+      <div className="top-section">
+      <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+       <MdIcons.MdMenu />
+     </NavLink>
+      <NavLink >
+        
+        <img  src={logo} alt="" />
+      </NavLink>
+      </div>
+      
+       
+      <div className="main-menu">
+      
+      
             {menuData.map((item, idx) => (
               <MenuItem 
                 key={idx}
@@ -134,25 +152,7 @@ const SideMenu = (props) => {
         </div>
       </div>
       
-      <div className="top">
-        
-        <NavLink onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
-       <MdIcons.MdMenu />
-     </NavLink>
-        
-        <div className="theme-toggler">
-          <MdIcons.MdLightMode className='dlMode-icons active'/>
-          <MdIcons.MdDarkMode className='dlMode-icons'/>
-        </div>
-        <div className="profile">
-          <div className="info">
-            <p>Hi, <b>John</b></p> 
-          </div>
-            <div className="profile-photo">
-              <img src={"/src/assets/musk.png"} />
-            </div>
-          </div>
-      </div>
+     
       
     </>
    

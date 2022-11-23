@@ -7,6 +7,7 @@ import * as MdIcons from "react-icons/md";
 const Dashboard = () => {
   return (
     <div className="content">
+      
       <div className="main">
      
         <h1>Dashboard</h1>
@@ -180,12 +181,12 @@ const Dashboard = () => {
             
             <div className="right">
               <div className="info">
-                <h3>ONLINE ORDERS</h3>
+                <h4>ONLINE ORDERS</h4>
                 <small className="text-muted">Last 24 hours</small>
               </div>
               <h5 className=
               "success">+20%</h5>
-              <h3>2873</h3>
+              <h4>2873</h4>
             </div>
           </div>
           <div className="item offline">
@@ -195,12 +196,12 @@ const Dashboard = () => {
             
             <div className="right">
               <div className="info">
-                <h3>OFFLINE ORDERS</h3>
+                <h4>OFFLINE ORDERS</h4>
                 <small className="text-muted">Last 24 hours</small>
               </div>
               <h5 className=
               "danger">-9%</h5>
-              <h3>981</h3>
+              <h4>981</h4>
             </div>
           </div>
           <div className="item customers">
@@ -210,12 +211,12 @@ const Dashboard = () => {
             
             <div className="right">
               <div className="info">
-                <h3>NEW CUSTOMERS</h3>
+                <h4>NEW CUSTOMERS</h4>
                 <small className="text-muted">Last 24 hours</small>
               </div>
               <h5 className=
               "success">+49%</h5>
-              <h3>1157</h3>
+              <h4>1157</h4>
             </div>
           </div>
           <div className="item add-product">
