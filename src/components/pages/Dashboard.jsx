@@ -82,7 +82,8 @@ const Dashboard = () => {
 
         <div className="recent-orders">
           <h2>Recent Orders</h2>
-          <table>
+         <div className="card">
+         <table>
             <thead>
               <tr>
                 <th>Product Name</th>
@@ -123,6 +124,7 @@ const Dashboard = () => {
               </tr>
             </tbody>
           </table>
+         </div>
           <a href="#">Show all</a>
         </div>
       </div>

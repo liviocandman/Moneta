@@ -40,7 +40,7 @@ class ClientesAdicionar extends Component {
     }
 
     axios.post('http://localhost:3000/clientes', registered)
-      .then(res => console.log(response.data))
+      .then(res => console.log(res.data))
 
     this.setState({
       name: '',
@@ -52,31 +52,42 @@ class ClientesAdicionar extends Component {
   
   render (){
     return (
-     <div className="content">
-       <div className="main">
+     <div className="content1">
+       <div className="card">
+        <h2 className="title">Clientes Adicionar</h2>
         <div className="form-div">
-          <form onSubmit={this.onSubmit}>
-            <input 
+          <form className="form" onSubmit={this.onSubmit}>
+            <div className="lineInput">
+              <label>Nome:</label>
+              <input 
               type="text" 
               placeholder="Nome do Cliente" 
               onChange={this.changeName} 
               value={this.state.name}
               className="form-control form-group"
-            />
-             <input 
+              />
+            </div>
+
+            <div className="lineInput">
+              <label>E-mail:</label>
+              <input 
               type="text" 
               placeholder="Email do Cliente" 
               onChange={this.changeEmail} 
               value={this.state.email}
               className="form-control form-group"
-            />
-             <input 
+              />
+            </div>
+            <div className="lineInput">
+              <label>Telefone:</label>
+              <input 
               type="text" 
               placeholder="Telefone do Cliente" 
               onChange={this.changePhone} 
               value={this.state.phone}
               className="form-control form-group"
-            />
+              />
+            </div>
 
             <input type="submit" className="btn btn-danger btn-block" />
           </form>

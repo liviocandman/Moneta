@@ -1,10 +1,25 @@
+import { useState, useEffect } from 'react'
 import * as FaIcons from "react-icons/fa";
+import axios from "axios";
+
+
 
 const ClientesLista = () => {
+  const [clientes, setClientes] = useState([])
+
+  useEffect(() => {
+    axios('http://localhost:3000/clientes')
+      .then(res => {
+        setClientes(res.data)
+      })
+  }, [])
+
   return (
-    <div className="content">
-      <form action="" method="POST">
-        <table>
+    <div className="content1">
+      <div className="card">
+        <h2 className="title">Clientes Lista</h2>
+        <form action="" method="POST">
+        <table className="insideTable">
           <thead>
             <tr>
               <th>Nome</th>
@@ -14,20 +29,26 @@ const ClientesLista = () => {
             </tr>
           </thead>
             <tbody>
-              <tr>
-                <td>Livio</td>
-                <td>liviocandman@example.com</td>
-                <td>989999999</td>
-                <td>
-                  <FaIcons.FaEdit />
-                  <FaIcons.FaTimes />
+       
+                {clientes.map((cliente) =>(
+                  <tr>
+                    <td>{cliente.name}</td>
+                    <td>{cliente.email}</td>
+                    <td>{cliente.phone}</td>
+                    <td>
+                    <FaIcons.FaEdit />
+                    <FaIcons.FaTimes  />
 
-                </td>
-              </tr>
+                    </td>
+                  </tr>
+                ))}
+                
+         
             </tbody>
          
         </table>
       </form>
+      </div>
     </div>
   )
 }

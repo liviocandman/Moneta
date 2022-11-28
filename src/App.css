@@ -55,6 +55,7 @@ body{
   user-select: none;
   overflow-x: hidden;
   font-size: 0.88rem;
+  color: var(--color-dark);
 }
 
 a{
@@ -280,7 +281,6 @@ b{
   height: 3.7rem;
   transition: all 0.5s;
   align-items: center;
-  background: #f2f2f2;
 }
 
 .side-menu .main-menu .sub-menu.active{
@@ -355,6 +355,7 @@ b{
   left: 1rem;
 }
 .side-menu{
+  background: var(--color-white);
   z-index: 2;
   widht: 18rem;
   box-shadow: 1rem 3rem 4rem var(--color-light);
@@ -379,5 +380,6 @@ b{
   box-sizing: border-box;
 }
 
-}
+/* ========== CADASTRO CLIENTE ===========*/
+
 
