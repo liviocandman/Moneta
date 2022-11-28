@@ -12,7 +12,7 @@ export const menuData = [
   {
     title: "Dashboard",
     exact: true,
-    path: "/",
+    path: "/dashboard",
     icon: <FaIcons.FaHome />,
   },
   {
@@ -23,18 +23,18 @@ export const menuData = [
   },
   {
     title: "Clientes",
-    exact: true,
-    path: "/clientes",
+    exact: false,
+    path: "",
     icon: <FaIcons.FaUsers />,
     subMenu: [
       {
         title: 'Lista',
-        path: '/clientes/lista',
+        path: '/clientes-lista',
         icon: <FaIcons.FaUserEdit />,
       },
       {
           title: 'Adicionar',
-          path: '/clientes/adicionar',
+          path: '/clientes-adicionar',
           icon: <FaIcons.FaUserPlus />,
       }
     ]
@@ -71,7 +71,7 @@ export const menuData = [
   subMenu: [
       {
           title: 'Empréstimos',
-          path: '/simulacoes/emprestimos',
+          path: '/simulacoes-emprestimos',
           icon: <FaIcons.FaMoneyBillAlt />,
       },
       {

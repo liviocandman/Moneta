@@ -6,6 +6,7 @@ import './App.css'
 import Dashboard from './components/pages/Dashboard'
 import ClientesAdicionar from './components/pages/ClientesAdicionar'
 import ClientesLista from './components/pages/ClientesLista'
+import Emprestimos from './components/pages/Emprestimos'
 
 
 
@@ -24,9 +25,10 @@ function App() {
       <div className={`container ${inactive ? "inactive" : ""}`}>
     
         <Routes>
-          <Route path="/" exact element={<Dashboard />} />
-          <Route path="clientes/lista" element={<ClientesLista />} /> 
-          <Route path="clientes/adicionar" element={<ClientesAdicionar />} /> 
+          <Route path="/dashboard" exact element={<Dashboard />} />
+          <Route path="/clientes-lista" element={<ClientesLista />} /> 
+          <Route path="/clientes-adicionar" element={<ClientesAdicionar />} /> 
+          <Route path="/simulacoes-emprestimos" element={<Emprestimos />} />
         </Routes>
       </div>
      

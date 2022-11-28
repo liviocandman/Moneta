@@ -1,0 +1,114 @@
+
+.title{
+  text-align: center;
+}
+.card{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.lineInput{
+  display: grid;
+  margin-bottom: 10px;
+}
+input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
+}
+button{
+  border: 0px;
+  padding: 10px;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all ease 0.3s;
+  
+}
+.botao1{
+    background: #c2c2c2;
+    color:#010101;
+    margin-bottom: 5px;
+}
+.botoes button{
+    justify-content: center;
+    width: 200px;
+}
+button:hover{
+  background-color: #474a51;
+}
+.buttonEmp1{
+  border: 0px;
+  position: relative;
+  left: 30vw;
+  width: 200px;
+  padding: 7px;
+  width: 5em;
+  outline: 0;
+  background-color: rgb(73, 73, 73);
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.buttonEmp2{
+  border: 0px;
+  position: relative;
+  left: 30vw;
+  width: 200px;
+  padding: 7px;
+  width: 5em;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+  font-weight: bold;
+  opacity: 85%;
+  transition: all ease 0.3s;
+}
+
+table{
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+table th{
+  background-color: #ccc;
+}
+table th, td{
+  text-align: center;
+  padding: 1px 5px;
+}
+tr:nth-child(even){
+  background-color: #f1f1f1;
+}
+table td img{
+  width: 20px;
+}
+.center{
+  text-align: center;
+}
+
+/*scroll-bar*/
+
+::-webkit-scrollbar-thumb {
+background-color: #5e5e5e;
+border-radius: 5px;
+height: 0.8vw;
+}
+
+::-webkit-scrollbar-track {
+background-color: #000000;
+width: 0.8vw;
+opacity: 0;
+height: 0.8vw;
+}
+
+::-webkit-scrollbar {
+width: 0.8vw;
+}
