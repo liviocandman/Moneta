@@ -4,7 +4,7 @@
 
 
  <h2> O desafio: </h2>	
- <p>  A empresa BisaWeb deseja implementar a novidade do Open Banking ao seu sistema de gestão financaeira para startups, o MonetaWeb. </p>
+ <p>  A empresa BisaWeb deseja implementar uma nova interface Web para seu sistema de gestão financaeira para startups, o MonetaWeb. </p>
 
 
  <h3> O que foi usado 🛠 </h3>
@@ -13,6 +13,8 @@
   <li> [Bootstrap] (https://getbootstrap.com) </li>
  <li> [HTML] (https://developer.mozilla.org/pt-BR/docs/Web/HTML) </li>
  <li> [CSS] (https://developer.mozilla.org/pt-BR/docs/Web/CSS) </li>
+  <li> [React] (https://pt-br.legacy.reactjs.org/) </li>
+  
  </ul>
 
 
